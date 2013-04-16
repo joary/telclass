@@ -1,4 +1,4 @@
 telclass
 ========
 
-Telecon Class Scripts
+Telecommunications Class Scripts
