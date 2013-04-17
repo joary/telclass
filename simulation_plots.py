@@ -58,6 +58,17 @@ def compare_signals_symbols(init=0, end=10, sps=128):
     plot(imag(rx_sym[init: end]), '-o')
     xlabel("Received Symbols")
 
+def chunks(init = 0, end = 20): 
+    tx = fromfile(open('tx.8b'), dtype=int8)
+    rx = fromfile(open('rx.8b'), dtype=int8)
+
+    figure()
+    subplot(211)
+    plot(real(tx[init: end]), '-o')
+    plot(imag(tx[init: end]), '-o')
+    subplot(212)
+    plot(real(rx[init: end]), '-o')
+    plot(imag(rx[init: end]), '-o')
 
 
 
