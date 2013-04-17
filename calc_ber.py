@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from pylab import *
-import top_block as simulation
+from matplotlib import pyplot as p
 
 import sys
 
@@ -15,7 +15,7 @@ def calc_snr(plot = False):
         exit(-1)
 
     size = min([len(tx), len(rx)]) - 1
-    rx = rx[1:size + 1]
+    rx = rx[0:size]
     tx = tx[0:size]
 
     tx_power = sum([abs(tx[i])**2 for i in range(size)])
@@ -26,12 +26,15 @@ def calc_snr(plot = False):
     SNR_dB = 10*log10(SNR)
 
     if plot:
+        init = 0
+        end = 100
         p.subplot(211)
-        p.plot(list(real(tx)), '-o')
-        p.plot(list(imag(tx)), '-o')
+        p.plot(list(real(tx[init:end])), '-o')
+        p.plot(list(imag(tx[init:end])), '-o')
         p.subplot(212)
-        p.plot(list(real(rx)), '-o')
-        p.plot(list(imag(rx)), '-o')
+        p.plot(list(real(rx[init:end])), '-o')
+        p.plot(list(imag(rx[init:end])), '-o')
+        p.show()
 
     return SNR_dB
 
@@ -40,13 +43,15 @@ def calc_ber(M):
     tx = fromfile(open('tx.8b'), dtype=byte)
     rx = fromfile(open('rx.8b'), dtype=byte)
 
+    print len(tx), len(rx)
+
     if (len(tx) == 0 or len(rx) == 0):
         print 'Not valid data'
         print '\tPlease run gnuradio simulation first'
         exit(-1)
 
-    size = min([len(tx), len(rx)]) - 1
-    rx = rx[1:size + 1]
+    size = min([len(tx), len(rx)])
+    rx = rx[0:size]
     tx = tx[0:size]
 
     #print tx, rx
@@ -66,6 +71,7 @@ if __name__=='__main__':
         print 'Usage: cal_ber.py M'
         print '\tM - Constellation Order'
         exit(0)
+
     snr_db = calc_snr()
     ber = calc_ber(int(sys.argv[1]))
 
