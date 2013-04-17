@@ -15,7 +15,7 @@ def simulate(M=4, num_syms=10, sps=8, pulse_type='square'):
     #pulse = f.gen(2500, sps, 0.35, 10*11*sps, pulse_type)
     
     rolloff = 0.1
-    pulse = gr.firdes.low_pass(1, samp_rate, 1.0*samp_rate/sps, rolloff)
+    pulse = gr.firdes.low_pass(1, 1, 1.0/sps, rolloff)
 
     print pulse
     #############################

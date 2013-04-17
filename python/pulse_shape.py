@@ -2,6 +2,7 @@ from numpy import arange, array, pi, sin
 from pylab import *
 from matplotlib import pyplot as p
 from cmath import phase
+from gnuradio import gr
 
 ###################################################
 # TODO:
@@ -25,6 +26,9 @@ def gen(sample_rate, samp_per_sym, rolloff, filter_size, ptype='square', plot=Fa
         filter_size = int(4./rolloff)
         cutoff = 1./(2*samp_per_sym)
         filt = gen_sinc(filter_size, cutoff)
+    elif ptype == 'grsinc':
+        cutoff = 1./(2*samp_per_sym)
+        filt = gr_sinc(1, sample_rate, cutoff, rolloff)
     elif ptype == 'rc':
         filt = gen_rc(filter_size, samp_per_sym, rolloff, plot)
     elif ptype == 'rrc':
@@ -71,6 +75,37 @@ def gen_hamming_win(size):
 
     win = alpha - beta*cos(2.*pi*n)
     return win
+
+def gr_sinc(gain=1, samp_rate=1, cutoff=0.5, rolloff=0.01, plot=False):
+
+    filt = array(gr.firdes.low_pass(gain, samp_rate, cutoff, rolloff))
+
+    filter_size = len(filt)
+    t = arange(-0.5, 0.5, 1./filter_size)
+    n = arange(-filter_size/2, filter_size/2)
+
+    print "Filter Size:", len(filt)
+
+    # Normalize filter
+    filt_energy = sum(abs(filt)**2)
+    print "Filter Energy:", filt_energy
+    filt = filt/sqrt(filt_energy)
+    filt_energy = sum(abs(filt)**2)
+    print "Normalizing:", filt_energy
+    # windowing
+    #filt = filt*window
+    # Generate filter frequency response
+    filt_freq = array(abs(fftshift(fft(filt))))
+
+    if plot:
+        p.figure(1)
+        p.subplot(211)
+        p.plot(n, filt, '-o')
+        p.subplot(212)
+        p.plot(t, abs(filt_freq), '-o')
+
+    return array(filt)
+
 
 def gen_sinc(filter_size, filter_bw, plot=False):
 #   Comments:
