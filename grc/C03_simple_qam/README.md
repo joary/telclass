@@ -7,7 +7,7 @@ This simulation does:
 
 2-Adds White Gaussian Noise to modulated symbols.
 
-3-Demodulate noisy symbols with phase threshold detection.
+3-Demodulate noisy symbols with threshold detection.
 
 **OBS:** A Scrambler of bits were used to make symbols have equal probability
 of happen.
