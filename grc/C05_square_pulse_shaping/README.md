@@ -1,5 +1,7 @@
 # Generic Modulation with Square Pulse Shape
 
+![Square Pulse Shaping Simulation](../../data/figures/square_pulse.png)
+
 # About the simulation:
 This simulation does:
 

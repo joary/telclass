@@ -1,6 +1,65 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Wed Apr 24 17:34:38 2013</timestamp>
+  <timestamp>Wed Apr 24 19:18:21 2013</timestamp>
+  <block>
+    <key>options</key>
+    <param>
+      <key>id</key>
+      <value>simulation</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Simple QAM Simulation</value>
+    </param>
+    <param>
+      <key>author</key>
+      <value>Joary Paulo</value>
+    </param>
+    <param>
+      <key>description</key>
+      <value>Simulation of a QAM Transmission using Squared pulse shaping.</value>
+    </param>
+    <param>
+      <key>window_size</key>
+      <value>2000, 2000</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>qt_gui</value>
+    </param>
+    <param>
+      <key>category</key>
+      <value>Custom</value>
+    </param>
+    <param>
+      <key>run_options</key>
+      <value>prompt</value>
+    </param>
+    <param>
+      <key>run</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>max_nouts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>realtime_scheduling</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(889, 53)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
   <block>
     <key>note</key>
     <param>
@@ -1598,29 +1657,6 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>constellation_cardinality</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>16</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(124, 115)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>qtgui_tab_widget</key>
     <param>
       <key>id</key>
@@ -1668,7 +1704,38 @@
     </param>
   </block>
   <block>
-    <key>variable_qtgui_range</key>
+    <key>gr_add_xx</key>
+    <param>
+      <key>id</key>
+      <value>gr_add_xx_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1581, 1212)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>270</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
     <param>
       <key>id</key>
       <value>snr_db</value>
@@ -1678,12 +1745,35 @@
       <value>False</value>
     </param>
     <param>
+      <key>value</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(286, 180)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>id</key>
+      <value>snr_db</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
       <key>label</key>
       <value>SNR - Sinal to Noise Ratio</value>
     </param>
     <param>
       <key>value</key>
-      <value>5</value>
+      <value>15</value>
     </param>
     <param>
       <key>start</key>
@@ -1726,7 +1816,7 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>snr_db</value>
+      <value>constellation_cardinality</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1734,101 +1824,11 @@
     </param>
     <param>
       <key>value</key>
-      <value>20</value>
+      <value>16</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(286, 180)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_add_xx</key>
-    <param>
-      <key>id</key>
-      <value>gr_add_xx_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1581, 1212)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>270</value>
-    </param>
-  </block>
-  <block>
-    <key>options</key>
-    <param>
-      <key>id</key>
-      <value>simulation</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>Simple QAM Simulation</value>
-    </param>
-    <param>
-      <key>author</key>
-      <value>Joary Paulo</value>
-    </param>
-    <param>
-      <key>description</key>
-      <value>Simulation of a QAM Transmission using Squared pulse shaping.</value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>2000, 2000</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>qt_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(889, 53)</value>
+      <value>(124, 115)</value>
     </param>
     <param>
       <key>_rotation</key>

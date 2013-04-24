@@ -1,5 +1,7 @@
 # PSK simulation
 
+![PSK Simulation](../../data/figures/simple_psk.png)
+
 # About the simulation:
 This simulation does:
 

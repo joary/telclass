@@ -1,5 +1,7 @@
 # Generic Modulation wih Sinc pulse shaping
 
+![Sinc Pulse Shaping Simulation](../../data/figures/sinc_pulse.png)
+
 # About the simulation:
 This simulation does:
 

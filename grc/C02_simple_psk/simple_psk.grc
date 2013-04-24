@@ -1,6 +1,65 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Wed Apr 24 17:34:23 2013</timestamp>
+  <timestamp>Wed Apr 24 19:16:49 2013</timestamp>
+  <block>
+    <key>options</key>
+    <param>
+      <key>id</key>
+      <value>simulation</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Simple PSK Simulation</value>
+    </param>
+    <param>
+      <key>author</key>
+      <value>Joary Paulo</value>
+    </param>
+    <param>
+      <key>description</key>
+      <value>Simulation of a PSK Transmission using Squared pulse shaping.</value>
+    </param>
+    <param>
+      <key>window_size</key>
+      <value>2000, 2000</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>qt_gui</value>
+    </param>
+    <param>
+      <key>category</key>
+      <value>Custom</value>
+    </param>
+    <param>
+      <key>run_options</key>
+      <value>prompt</value>
+    </param>
+    <param>
+      <key>run</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>max_nouts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>realtime_scheduling</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(889, 53)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
   <block>
     <key>digital_scrambler_bb</key>
     <param>
@@ -1586,84 +1645,6 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>constellation_cardinality</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>4</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(124, 115)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_qtgui_range</key>
-    <param>
-      <key>id</key>
-      <value>snr_db</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>SNR - Sinal to Noise Ratio</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>5</value>
-    </param>
-    <param>
-      <key>start</key>
-      <value>-20</value>
-    </param>
-    <param>
-      <key>stop</key>
-      <value>60</value>
-    </param>
-    <param>
-      <key>step</key>
-      <value>.1</value>
-    </param>
-    <param>
-      <key>widget</key>
-      <value>counter_slider</value>
-    </param>
-    <param>
-      <key>orient</key>
-      <value>Qt.Horizontal</value>
-    </param>
-    <param>
-      <key>min_len</key>
-      <value>200</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>0,0,10,100</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(124, 178)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
       <value>noise_amp</value>
     </param>
     <param>
@@ -1731,29 +1712,6 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>snr_db</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(285, 178)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>note</key>
     <param>
       <key>id</key>
@@ -1777,58 +1735,100 @@
     </param>
   </block>
   <block>
-    <key>options</key>
+    <key>variable</key>
     <param>
       <key>id</key>
-      <value>simulation</value>
+      <value>snr_db</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(285, 178)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>id</key>
+      <value>snr_db</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>title</key>
-      <value>Simple PSK Simulation</value>
+      <key>label</key>
+      <value>SNR - Sinal to Noise Ratio</value>
     </param>
     <param>
-      <key>author</key>
-      <value>Joary Paulo</value>
+      <key>value</key>
+      <value>15</value>
     </param>
     <param>
-      <key>description</key>
-      <value>Simulation of a PSK Transmission using Squared pulse shaping.</value>
+      <key>start</key>
+      <value>-20</value>
     </param>
     <param>
-      <key>window_size</key>
-      <value>2000, 2000</value>
+      <key>stop</key>
+      <value>60</value>
     </param>
     <param>
-      <key>generate_options</key>
-      <value>qt_gui</value>
+      <key>step</key>
+      <value>.1</value>
     </param>
     <param>
-      <key>category</key>
-      <value>Custom</value>
+      <key>widget</key>
+      <value>counter_slider</value>
     </param>
     <param>
-      <key>run_options</key>
-      <value>prompt</value>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
     </param>
     <param>
-      <key>run</key>
-      <value>True</value>
+      <key>min_len</key>
+      <value>200</value>
     </param>
     <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
+      <key>gui_hint</key>
+      <value>0,0,10,100</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(889, 53)</value>
+      <value>(124, 178)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>constellation_cardinality</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(124, 115)</value>
     </param>
     <param>
       <key>_rotation</key>

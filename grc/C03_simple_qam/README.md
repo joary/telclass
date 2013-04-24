@@ -1,5 +1,7 @@
 # PAM simulation
 
+![QAM Simulation](../../data/figures/simple_qam.png)
+
 # About the simulation:
 This simulation does:
 

@@ -1,5 +1,7 @@
 # PAM simulation
 
+![PAM Simulation](../../data/figures/simple_pam.png)
+
 # About the simulation:
 This simulation does:
 
