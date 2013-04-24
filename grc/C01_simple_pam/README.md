@@ -43,9 +43,9 @@ the number of bits per constellaiton symbol can be seen as log2(M)
 
 * **constellation:** Constellation vector calculated with python as:
 
-<pre>
+<code>
 [complex(2*i - (constellation_cardinality)+1,0) for i in range(constellation_cardinality)] 
-</pre>
+</code>
 
 for constellation_cardinality = 4, the result is:
 
@@ -105,7 +105,7 @@ about simulation.
 The python script <pre>calc_ber.py</pre> defines a post sript example that
 compares transmitted and received data calculating the transmission Bit Error
 Rate (BER), the SNR are calculated too, and you can compare it with the 
-SNR choosed on *snr_db*.
+SNR choosed on **snr_db**.
 
 
 

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Wed Apr 24 15:17:35 2013</timestamp>
+  <timestamp>Wed Apr 24 15:33:09 2013</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -1477,61 +1477,6 @@
     </param>
   </block>
   <block>
-    <key>variable_qtgui_range</key>
-    <param>
-      <key>id</key>
-      <value>snr_db</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>SNR - Sinal to Noise Ratio</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>15</value>
-    </param>
-    <param>
-      <key>start</key>
-      <value>-20</value>
-    </param>
-    <param>
-      <key>stop</key>
-      <value>60</value>
-    </param>
-    <param>
-      <key>step</key>
-      <value>.1</value>
-    </param>
-    <param>
-      <key>widget</key>
-      <value>counter_slider</value>
-    </param>
-    <param>
-      <key>orient</key>
-      <value>Qt.Horizontal</value>
-    </param>
-    <param>
-      <key>min_len</key>
-      <value>200</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>0,0,10,100</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(124, 178)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>gr_add_xx</key>
     <param>
       <key>id</key>
@@ -1797,7 +1742,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>value</key>
@@ -1806,6 +1751,61 @@
     <param>
       <key>_coordinate</key>
       <value>(286, 176)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>id</key>
+      <value>snr_db</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>SNR - Sinal to Noise Ratio</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>15</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-20</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>60</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>.1</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>0,0,10,100</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(124, 178)</value>
     </param>
     <param>
       <key>_rotation</key>
