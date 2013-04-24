@@ -1,4 +1,4 @@
-# Generic Modulation simulation
+# Generic Modulation with Square Pulse Shape
 
 # About the simulation:
 This simulation does:
