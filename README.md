@@ -12,10 +12,10 @@
  https://github.com/joary/telclass/blob/master/grc/C03_simple_qam)
 
 [Class 04: Generic Modulation simulation](
- https://github.com/joary/telclass/blob/master/grc/C04_generic_modulation/)
+ https://github.com/joary/telclass/blob/master/grc/C04_generic_modulation)
 
 [Class 05: Generic Modulation with Square pulse shaping](
- https://github.com/joary/telclass/blob/master/grc/C05_square_pulse_shaping/)
+ https://github.com/joary/telclass/blob/master/grc/C05_square_pulse_shaping)
 
 [Class 06: Generic Modulation with Sinc pulse shaping](
-    https://github.com/joary/telclass/blob/master/grc/C05_sinc_pulse_shaping/README.md)
+    https://github.com/joary/telclass/blob/master/grc/C06_sinc_pulse_shaping)
