@@ -10,11 +10,11 @@ of happen.
 
 open the simulation with:
 
-    #> gnuradio-companion simple_pam.grc
+<pre>#> gnuradio-companion simple_pam.grc</pre>
 
 run the simulation with:
 
-    F6
+<pre>F6</pre>
 
 # About the parameters
 
@@ -37,19 +37,19 @@ the number of bits per constellaiton symbol can be seen as log2(M)
 
 * *constellation:* Constellation vector calculated with python as:
 
-    <pre>[complex(2*i - (constellation_cardinality)+1,0) for i in range(constellation_cardinality)] </pre>
+<pre>[complex(2*i - (constellation_cardinality)+1,0) for i in range(constellation_cardinality)] </pre>
 
 for constellation_cardinality = 4, the result is:
 
-    [(-3+0j), (-1+0j), (1+0j), (3+0j)]
+<pre>[(-3+0j), (-1+0j), (1+0j), (3+0j)]</pre>
 
 * *constellation_power:* Constellation power calculated with python as:
 
-    sqrt(sum(abs(array(constellation))**2)/constellation_cardinality)
+<pre><code>sqrt(sum(abs(array(constellation))**2)/constellation_cardinality)</code></pre>
 
 for constellation_cardinality = 4, the result is:
 
-    2.2360679774997898
+<pre>2.2360679774997898</pre>
 
 * *const_object:* Object necessary for demodulation block, defines demodulation
 behavior, created with python as:
@@ -57,17 +57,20 @@ behavior, created with python as:
     gnuradio.digital.constellation_rect(constellation, pre_diff_code, rotational_symmetry, real_sectors, imag_sectors, width_real_sectors, width_imag_sectors)
 
 especificaly for PAM, we use:
-    pre_diff_code = []
-    rotational_symmetry = 0
-    real_sectors = len(constellation)
-    imag_sectors = 0
-    width_real_sectors = 2
-    width_imag_sectors = 0
+
+<pre>
+pre_diff_code = []
+rotational_symmetry = 0
+real_sectors = len(constellation)
+imag_sectors = 0
+width_real_sectors = 2
+width_imag_sectors = 0
+</pre>
 
 see: http://gnuradio.org/doc/sphinx/digital/constellations.html
 
 * *noise_amp:* Noise amplitude calculated based on signal to noise decibel level
 using the folowing python code
 
-    sqrt(  (10**(-snr_db/10.))  /2. )
+<pre>sqrt(  (10**(-snr_db/10.))  /2. )<pre>
 
