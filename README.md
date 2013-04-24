@@ -5,10 +5,10 @@
 [Class 01: PAM simulation](
  https://github.com/joary/telclass/blob/master/grc/C01_simple_pam)
 
-[Class 02: QAM simulation](
+[Class 02: PSK simulation](
  https://github.com/joary/telclass/blob/master/grc/C02_simple_psk)
 
-[Class 03: PSK simulation](
+[Class 03: QAM simulation](
  https://github.com/joary/telclass/blob/master/grc/C03_simple_qam)
 
 [Class 04: Generic Modulation simulation](

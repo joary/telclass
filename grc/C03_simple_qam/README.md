@@ -1,4 +1,4 @@
-# PAM simulation
+# QAM simulation
 
 ![QAM Simulation](../../data/figures/simple_qam.png)
 
