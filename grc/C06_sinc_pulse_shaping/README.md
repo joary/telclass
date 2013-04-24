@@ -1,4 +1,4 @@
-# Generic Modulation simulation
+# Generic Modulation wih Sinc pulse shaping
 
 # About the simulation:
 This simulation does:
@@ -69,11 +69,6 @@ response.
     cutoff_freq = 0.5/sps
     1./10000
 </pre>
-
-* **snr_after_filter:** Shows the SNR after pulse shaping recovery,
-calculated here as:
-
-<pre>snr_db + 10*log10(sps)</pre>
 
 * **pam_constellation:** Gnuradio does not define a constellation object for PAM
 then we need to create the constellation with:
