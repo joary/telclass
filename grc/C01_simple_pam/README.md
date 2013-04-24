@@ -1,12 +1,18 @@
 # PAM simulation
 
 # About the simulation:
-This simulation modulate bits using PAM constelattion,
-adds Wight Gaussian Noise to generated symbols
-and demodulate symbols with treshold detection.
+This simulation does:
+
+Modulate bits using PAM constelattion,
+
+Adds Wight Gaussian Noise to modulated symbols.
+
+Demodulate noisy symbols with treshold detection.
 
 A Scrambler of bits were used to make symbols have equal probability
 of happen.
+
+# How to use
 
 open the simulation with:
 
@@ -72,5 +78,21 @@ see: http://gnuradio.org/doc/sphinx/digital/constellations.html
 * *noise_amp:* Noise amplitude calculated based on signal to noise decibel level
 using the folowing python code
 
-<pre>sqrt(  (10**(-snr_db/10.))  /2. )<pre>
+<pre>sqrt(  (10**(-snr_db/10.))  /2. )</pre>
+
+# Post Simulation Scripts
+
+While simulation runs all data are saved on files, this way
+you can post process data, and calculate some other information
+about simulation.
+
+## BER calculations
+
+The python script <pre>calc_ber.py</pre> defines a post sript example that
+compares transmitted and received data calculating the transmission Bit Error
+Rate (BER), the SNR are calculated too, and you can compare it with the 
+SNR choosed on *snr_db*.
+
+
+
 
