@@ -1,1 +1,3 @@
 Make BERxSNR plot
+
+Add figures to README.md
