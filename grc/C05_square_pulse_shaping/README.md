@@ -49,11 +49,6 @@ the number of bits per constellaiton symbol can be seen as log2(M)
 
 * **pulse:** Define the shape of pulse, a sequence of '1' with **sps** elements
 
-* **first_symbol_delay:** Used to skip initial samples of received signal,
-made to achieve the correct point of symbol timing, defined as:
-
-<pre>sps-1</pre>
-
 * **snr_after_filter:** Shows the SNR after pulse shaping recovery,
 calculated here as:
 

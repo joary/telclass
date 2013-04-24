@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Wed Apr 24 18:36:38 2013</timestamp>
+  <timestamp>Wed Apr 24 18:47:33 2013</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -1698,29 +1698,6 @@
     <param>
       <key>_coordinate</key>
       <value>(561, 1700)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>first_symbol_delay</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>sps-1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(215, 366)</value>
     </param>
     <param>
       <key>_rotation</key>
