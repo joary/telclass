@@ -53,7 +53,30 @@ then we need to create the constellation with:
 * **pam_constellation_object:** Creates the constellation object for PAM
 as shown in:
 
-https://github.com/joary/telclass/tree/master/grc/C01_simple_pam#automatically-calculated-parameters
+<pre>
+import gnuradio
+
+gnuradio.digital.constellation_rect(
+    constellation,          # Constellation vector
+    pre_diff_code,          # Differential code aplied after demodulation
+    rotational_symmetry,    # Symetry of rotation
+    real_sectors,           # Number of sector in real axis
+    imag_sectors,           # Number of sector in imaginary axis
+    width_real_sectors,     # Sector size in real axis
+    width_imag_sectors      # Sector size in imag axis
+)
+</pre>
+
+Specifically for PAM, we use:
+
+<pre>
+pre_diff_code = []
+rotational_symmetry = 0
+real_sectors = len(constellation)
+imag_sectors = 0
+width_real_sectors = 2
+width_imag_sectors = 0
+</pre>
 
 * **const_object:** Constellation object necessary for demodulation block, 
 defines demodulation behavior.
