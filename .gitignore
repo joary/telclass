@@ -3,3 +3,5 @@
 *.32fc
 *.32f
 simulation.py
+top_block.py
+*.log
