@@ -23,3 +23,32 @@
 
 [Class 06: Generic Modulation with Sinc pulse shaping](
     https://github.com/joary/telclass/blob/master/grc/C06_sinc_pulse_shaping)
+
+# Base Infrastructure:
+
+The scripts have been tested with gnuradio version `3.7.11`.
+
+For those who use docker, a precompiled docker container can be found [here]( https://hub.docker.com/r/joarypl/docker-telclass/).
+
+To download the container run:
+
+```
+docker pull joarypl/docker-telclass
+```
+
+To start the container run:
+
+```
+xhost + local:docker
+docker stop telclass
+docker rm telclass
+docker run --name telclass \
+  -ti --net=host --ulimit rtprio=99 --privileged \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v /dev/bus/usb:/dev/bus/usb \
+   telclass:latest bash
+
+```
+
+A new bash terminal will open.
+Then navigate to the directory `/home/telclass/` and run any of the existing classes.
