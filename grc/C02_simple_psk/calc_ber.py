@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
-from pylab import *
+from numpy import fromfile, dtype, complex64, log10, log2, byte
 from matplotlib import pyplot as p
 
 import sys
