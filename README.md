@@ -40,15 +40,19 @@ To start the container run:
 
 ```
 xhost + local:docker
-docker stop telclass
-docker rm telclass
 docker run --name telclass \
   -ti --net=host --ulimit rtprio=99 --privileged \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v /dev/bus/usb:/dev/bus/usb \
    telclass:latest bash
-
+docker stop telclass
+docker rm telclass
 ```
 
 A new bash terminal will open.
-Then navigate to the directory `/home/telclass/` and run any of the existing classes.
+Then navigate to the directory `/home/telclass/grc/` and run any of the existing classes.
+
+```
+cd /home/telclass/grc/C01_simple_pam/
+gnuradio-companion ./simple_pam.grc
+```
